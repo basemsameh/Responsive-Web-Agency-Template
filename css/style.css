@@ -1,0 +1,513 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color1: #10cab7;
+  --color2: #f6f6f6;
+  --white: #fff;
+  --lightgrey: #d3d3d3;
+  --paragraph: #797979;
+  --black: #000;
+  --bg-footer: #2c4755;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+/* Hedaer */
+header {
+  background-image: url(../images/landing.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Navbar */
+nav {
+  background-color: var(--white);
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 20px 40px;
+}
+
+nav figure img {
+  width: 60px;
+}
+
+/* Icon List */
+.icon-list {
+  height: fit-content;
+}
+
+/* List */
+.list {
+  width: 30px;
+  height: 18px;
+  position: relative;
+  direction: rtl;
+  transition: all 0.5s linear 0s;
+}
+
+.icon-list:hover .list div:nth-of-type(2),
+.icon-list:hover .list div:first-child {
+  width: 100%;
+  opacity: 1;
+}
+
+.icon-list .list div {
+  height: 2px;
+  background-color: var(--black);
+  width: 100%;
+  position: absolute;
+}
+
+.icon-list .list div:first-child,
+.icon-list .list div:nth-of-type(2) {
+  opacity: 0.5;
+  transition: all 0.2s linear 0s;
+}
+
+.icon-list .list div:nth-of-type(2) {
+  top: 50%;
+  width: 60%;
+  transform: translateY(-50%);
+}
+
+.icon-list .list div:last-child {
+  bottom: 0;
+}
+
+header nav ul {
+  list-style: none;
+  width: 196px;
+  background-color: var(--color2);
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  display: none;
+}
+
+header nav ul::before {
+  content: "";
+  height: 18px;
+  width: 18px;
+  background-color: var(--color2);
+  position: absolute;
+  right: 10px;
+  top: -8px;
+  transform: rotate(45deg);
+}
+
+header .icon-list:hover ul {
+  display: block;
+}
+
+nav ul li {
+  border-bottom: 1px solid var(--lightgrey);
+  padding: 15px 100px 10px 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--black);
+  cursor: pointer;
+  transition: all 0.2s linear 0s;
+}
+
+nav ul li a:hover {
+  margin-left: 10px;
+  color: var(--color1);
+}
+
+nav ul li a:focus {
+  color: var(--color1);
+}
+
+/* Home page */
+.home {
+  margin: 200px auto;
+  width: 90%;
+  text-align: center;
+}
+
+.home h1 {
+  color: var(--color1);
+  font-size: 55px;
+  margin-bottom: 20px;
+}
+
+.home p,
+main section p {
+  line-height: 25px;
+  font-size: 20px;
+  width: 325px;
+  margin: 0 auto;
+}
+
+/* Main */
+main {
+  background-color: var(--color2);
+}
+
+main section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+main section .content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 100px auto 0;
+}
+
+main section div {
+  margin-bottom: 50px;
+}
+
+main section i {
+  color: var(--color1);
+  font-size: 45px;
+}
+
+main section h3 {
+  margin: 20px 0;
+}
+
+main section p {
+  color: var(--paragraph);
+  font-size: 16px;
+}
+
+main section .title {
+  width: fit-content;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+main section h2 {
+  font-size: 75px;
+  color: var(--lightgrey);
+  margin: 0 auto;
+  width: fit-content;
+}
+
+main section img {
+  width: 100%;
+}
+
+/* Section One */
+main section:first-child p {
+  font-size: 17px;
+}
+
+/* Services Section */
+main .services {
+  background-color: var(--white);
+}
+
+main .services figure {
+  display: none;
+}
+
+/* Portfolio Section */
+main .portfolio .content-container {
+  background-color: var(--color2);
+}
+
+main .services .content-container .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main .portfolio .content-container div {
+  background-color: var(--white);
+  text-align: left;
+  max-width: 455px;
+  padding-bottom: 20px;
+}
+
+main .portfolio div h3 {
+  padding: 0 20px;
+}
+
+main .portfolio div p {
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Section Five (About) */
+main .about {
+  background-color: var(--white);
+}
+
+main b {
+  color: var(--black);
+}
+
+main .about figure {
+  margin: 0 auto 50px;
+  height: 375px;
+  width: 250px;
+}
+
+hr {
+  border: 1px solid var(--color1);
+  width: 60%;
+  margin: 50px auto 20px;
+}
+
+/* Contact Section Five */
+main .contact .content-container {
+  width: 330px;
+  max-width: 940px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+main .contact h4 {
+  font-size: 25px;
+  width: 100%;
+  color: var(--bg-footer);
+  letter-spacing: -2px;
+}
+
+main .contact a {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--color1);
+  font-weight: bold;
+  margin: 10px auto;
+  cursor: pointer;
+}
+
+main .contact p i {
+  color: var(--bg-footer);
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bg-footer);
+  color: var(--white);
+  padding: 30px 0;
+  margin-top: 100px;
+}
+
+footer .content {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+footer span {
+  color: var(--color1);
+  font-weight: bold;
+}
+
+/* Up Button */
+button.fa-arrow-up {
+  position: fixed;
+  background-color: var(--color1);
+  color: #fff;
+  padding: 15px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  bottom: 90px;
+  right: 20px;
+  z-index: 10;
+  display: none;
+}
+
+button.fa-arrow-up:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (min-width: 1000px) {
+  /* Navbar */
+  nav {
+    padding: 20px 80px;
+  }
+
+  header nav ul {
+    right: 75px;
+  }
+
+  /* Main */
+  main section {
+    text-align: left;
+  }
+
+  main section:first-child {
+    text-align: center;
+  }
+
+  main section h2 {
+    font-size: 100px;
+  }
+
+  main section .content-container {
+    width: 90%;
+  }
+
+  /* Services */
+  main .services .content-container {
+    width: 940px;
+  }
+
+  main .services .content-container .content div {
+    position: relative;
+  }
+
+  main .services .content-container .contact div:nth-of-type(2) {
+    order: 3;
+  }
+
+  main .services .content-container .contact div:nth-of-type(3) {
+    order: 2;
+  }
+
+  main .services .content-container .content div i {
+    position: absolute;
+    top: 15px;
+    left: -50px;
+    font-size: 32px;
+  }
+
+  /* About */
+  main .about figure {
+    margin: 0 0 50px;
+    position: relative;
+    z-index: 2;
+  }
+
+  main .services figure::before,
+  main .about figure::before,
+  main .about figure::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+  }
+
+  main .about figure::before {
+    height: 440px;
+    width: 100px;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ebeced;
+  }
+
+  main .about figure::after {
+    width: 120px;
+    height: 300px;
+    right: -150px;
+    top: -30px;
+    border-left: 80px solid var(--color1);
+    border-bottom: 80px solid var(--color1);
+  }
+
+  main .about .content-container .content {
+    width: 440px;
+  }
+
+  main .about .content-container .content p {
+    margin: 0;
+    width: 100%;
+  }
+
+  main .about hr {
+    position: relative;
+    left: -88px;
+  }
+
+  /* Contact */
+  main .contact .content-container {
+    width: 450px;
+  }
+
+  main .contact h4,
+  main .contact a {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Services */
+  main .services .content-container {
+    width: 1160px;
+  }
+
+  main .services figure {
+    display: block;
+    width: 260px;
+    height: 345px;
+    position: relative;
+    z-index: 5;
+  }
+
+  main .services figure::before {
+    height: 440px;
+    width: 100px;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--bg-footer);
+    z-index: -1;
+  }
+
+  main .services .content-container {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  main .services .content-container .content {
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* Portfolio */
+  main .portfolio .content-container div {
+    width: 360px;
+  }
+
+  /* About */
+  main .about .content-container .content {
+    width: 640px;
+  }
+
+  main .about hr {
+    left: -125px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main .services .content-container,
+  main .about .content-container,
+  main .portfolio .content-container,
+  main .detail .content-container {
+    width: 80%;
+  }
+}
